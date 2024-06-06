@@ -1,5 +1,7 @@
 # TTSlist-En chatTTS English voices
 
+https://kangyiwen.github.io/TTSlist-En/
+
 # All TTS are generated using the following parameters.
 
 "prompt": "[oral_5]"
@@ -9,9 +11,6 @@
 "top_p": 0.7
 
 "top_k": 20,
-
-Domain: www.TTSlist.com/en/
-Backup: http://ttslist.aiqbh.com/en/"
 
 
 # Audio text: 
