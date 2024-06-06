@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chatTTS Voice Library | AI Voice Number Library, No Hassle with Voice Cards TTS List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            padding: 20px;
+            background: linear-gradient(45deg, #ff6b6b, #f06595, #007BFF);
+            color: white;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .intro {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .intro-section {
+            flex: 1;
+            min-width: 250px;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            position: relative;
+            text-align: left;
+        }
+        .intro-section h2 {
+            font-size: 1.2em;
+            margin: 0;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border-radius: 5px;
+            position: absolute;
+            top: -10px;
+            left: 10px;
+            z-index: 1;
+        }
+        .intro-section p {
+            margin-top: 30px;
+            font-size: 1em;
+            line-height: 1.5em;
+        }
+        .intro-section:nth-of-type(1) {
+            background-color: #e0f7fa;
+            color: #00796b;
+        }
+        .intro-section:nth-of-type(2) {
+            background-color: #fff9c4;
+            color: #f57f17;
+        }
+        .intro-section:nth-of-type(3) {
+            background-color: #f3e5f5;
+            color: #6a1b9a;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .button-container {
+            margin: 10px;
+            text-align: center;
+            width: 18%;
+        }
+        button {
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 16px;
+            width: 100%;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        audio {
+            width: 100%;
+            margin-top: 5px;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f06595;
+            color: white;
+            text-align: center;
+        }
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TTSlist.com</h1>
+        <h1>chatTTS Voice Library / AI Voice Number Library / No Hassle with Voice Cards</h1>
+    </header>
+    <div class="intro">
+        <div class="intro-section">
+            <h2>Introduction</h2>
+            <p>chatTTS is a lot of fun, but I spent a lot of time drawing voice cards, so I just generated them all and shared them with everyone.
+            <br><br>The following 1000 voices start from 100, with a step of 100, all the way to 100000. Currently, there is no distinction between male and female voices. Choose the voice number you like and enter it into your chatTTS parameter to produce it. If the voices are still not enough to play with, please let me know.</p>
+            
+            <p>Additionally, the English version of the voice library is in production...</p>
+        </div>
+        <div class="intro-section">
+            <h2>Original Text/Parameters</h2>
+            <p>【Original Audio Text】<br>Long time no see. Do you still remember our university days? You are listening to the open source project TTS List. Those were the days of our youth! Do you still remember when we climbed to the top of the mountain to watch the sunrise? I still remember the wish we made at that time.
+            <br><br>【Parameters】<br>"prompt": "[oral_5]"<br> "temperature": 0.3<br>"top_p": 0.7<br>"top_k": 20,</p>
+        </div>
+        <div class="intro-section">
+            <h2>About</h2>                
+            <p><a href="https://github.com/2noise/ChatTTS" target="_blank">chatTTS Original</a><br>
+            <a href="https://github.com/jianchang512/chatTTS-ui" target="_blank">ChatTTS WebUI & API</a><br>
+            <a href="https://github.com/kangyiwen/TTSlist-En/" target="_blank">Project GitHub</a><br>
+			<a href="https://github.com/kangyiwen/TTSlist/" target="_blank">中文音色库</a>
+			</p>
+            <p>---About Me---</p>
+
+            <p>I am Even.kang, I have been an internet entrepreneur for more than ten years. I started learning Python in May 2024 with the help of AI. GitHub is a great place, and this is also my first project that I completed entirely by myself. </p>                
+            <p>Email： kyw1981@Gmail.com</p>
+        </div>
+    </div>
+    <div class="container">
+        <!-- JavaScript will insert buttons here -->
+    </div>
+    <footer>
+        <p>© 2024 TTS Voice Library <a href="http://www.TTSlist.com" target="_blank">www.TTSlist.com</a> <a href="https://github.com/kangyiwen/TTSlist/" target="_blank">Project GitHub</a></p>
+    </footer>
+    <script>
+        const container = document.querySelector('.container');
+        const colors = ['#ff6b6b', '#f06595', '#007BFF', '#51cf66', '#fd7e14'];
+
+        // Function to get a random color from the colors array
+        function getRandomColor() {
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        for (let i = 1; i <= 995; i++) {
+            const fileNumber = i * 100;
+            const buttonContainer = document.createElement('div');
+            buttonContainer.className = 'button-container';
+
+            const button = document.createElement('button');
+            button.textContent = `Voice Number ${fileNumber}`;
+            button.style.backgroundColor = getRandomColor();
+            button.onclick = () => {
+                const audio = buttonContainer.querySelector('audio');
+                audio.play();
+            };
+
+            const audio = document.createElement('audio');
+            audio.controls = true;
+            audio.src = `${fileNumber}_oral5.wav`;
+
+            buttonContainer.appendChild(button);
+            buttonContainer.appendChild(audio);
+            container.appendChild(buttonContainer);
+        }
+    </script>
+</body>
+</html>
