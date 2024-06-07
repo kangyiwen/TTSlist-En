@@ -164,8 +164,8 @@
             return colors[Math.floor(Math.random() * colors.length)];
         }
 
-        for (let i = 1; i <= 995; i++) {
-            const fileNumber = i * 100;
+        // Function to create buttons with lazy-loaded audio
+        function createButton(fileNumber) {
             const buttonContainer = document.createElement('div');
             buttonContainer.className = 'button-container';
 
@@ -174,17 +174,41 @@
             button.style.backgroundColor = getRandomColor();
             button.onclick = () => {
                 const audio = buttonContainer.querySelector('audio');
+                if (!audio.src) {
+                    audio.src = `${fileNumber}_oral5.wav`;
+                }
                 audio.play();
             };
 
             const audio = document.createElement('audio');
             audio.controls = true;
-            audio.src = `${fileNumber}_oral5.wav`;
 
             buttonContainer.appendChild(button);
             buttonContainer.appendChild(audio);
             container.appendChild(buttonContainer);
         }
+
+        // Initial load of a limited number of buttons
+        const initialLoad = 20; // Initial number of buttons to load
+        const incrementLoad = 20; // Number of buttons to load each time user scrolls to bottom
+        let currentLoad = 0;
+
+        function loadButtons() {
+            for (let i = currentLoad; i < currentLoad + initialLoad; i++) {
+                const fileNumber = (i + 1) * 100;
+                createButton(fileNumber);
+            }
+            currentLoad += initialLoad;
+        }
+
+        loadButtons(); // Load initial set of buttons
+
+        // Load more buttons when user scrolls to bottom
+        window.addEventListener('scroll', () => {
+            if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+                loadButtons();
+            }
+        });
     </script>
 </body>
 </html>
