@@ -1,6 +1,6 @@
 # TTSlist-En chatTTS English voices
 
-https://kangyiwen.github.io/TTSlist-En/
+http://ttslist.aiqbh.com/en/
 
 # All TTS are generated using the following parameters.
 
